@@ -1,0 +1,33 @@
+<!-- This HTML file checks if a number is a Duck number. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num=parseInt(prompt("Enter a number:"));
+        let i,c=0,flag=0;
+        let a = num;
+        while( a > 0){
+            a=Math.floor(a/10);
+            c++;
+        }
+        a =num ;
+        let front =Math.floor (a/Math.pow(10,c-1));
+        while( num > 0)
+        {
+            let d = num % 10;
+            if ( d === 0 && front !== 0)
+            flag = 1;
+        num = Math.floor(num/10);
+        }
+        if( flag === 1)
+        document.write("Duck No:");
+    else
+    document.write("Not a Duck no");
+    </script>
+</body>
+</html>

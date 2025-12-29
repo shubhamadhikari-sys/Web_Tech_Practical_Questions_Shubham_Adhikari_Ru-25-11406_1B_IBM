@@ -1,0 +1,26 @@
+<!-- This HTML file checks if a number is a Pallindrome number. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num=parseInt(prompt("Enter a number:"));
+        let a = num;
+        let rev=0,d;
+        while(a>0)
+    {
+        d=a%10;
+        rev=rev*10+d;
+        a=Math.floor(a/10);
+    }
+    if( rev == num)
+    document.write("Pallindrome Number:"+num);
+    else
+    document.write("Not a Pallindrome Number:"+num);
+    </script>
+</body>
+</html>
