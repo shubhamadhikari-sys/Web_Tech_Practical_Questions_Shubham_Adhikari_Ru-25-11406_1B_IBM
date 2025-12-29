@@ -1,0 +1,30 @@
+<!-- Armstrong Numbers -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    document.write("3-digit Armstrong Number are :<br>");
+    let i,sum=0,cb,r;
+    for(i=100;i<=999;i++)
+   {
+    j=i;
+    while(j>0)
+   {
+    r=j%10;
+    cb=r*r*r;
+    sum+=cb;
+    j=Math.trunc(j/10);
+   }
+   if(sum==i)
+   document.write(i+" is a Armstrong number.<br>");
+   sum=0;
+   }
+
+   </script> 
+</body>
+</html>

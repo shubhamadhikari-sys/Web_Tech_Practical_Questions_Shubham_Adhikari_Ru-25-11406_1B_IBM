@@ -1,0 +1,31 @@
+<!-- Number Guessing Game -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num=56;
+        while(true)
+{    let n= parseInt(prompt("Guess a number :"));
+    if(n== num)
+    {
+        alert(" Congratulations , Your guess is correct !!");
+        break;
+    }
+    else if(n<num)
+    {
+        alert("Incorrect Guess !! , Your guess is lower than the secret number.");
+    }
+    else 
+    {
+        
+        alert("Incorrect Guess !! , Your guess is higher than the secret number.");
+    }
+    }
+    </script>
+</body>
+</html>
