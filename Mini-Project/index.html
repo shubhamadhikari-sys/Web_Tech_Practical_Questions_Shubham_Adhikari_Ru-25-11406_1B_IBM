@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shubham - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>Shubham Adhikari</h1>
+                <p class="email">shubhamadhikari2006@gmail.com</p>
+                <p class="phone">91234765</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#recommendations">Recommendations</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+  <!-- Home Icon -->
+    <div class="home-icon" id="homeIcon">
+        <span>&#8962;</span>
+    </div>
+    
+
+    <!-- Main Content -->
+    <main>
+        <!-- About Me Section -->
+        <section id="about" class="about-section">
+            <div class="about-container">
+                <div class="profile-image">
+                    <img src="Profile picture.jpeg" alt="Jane Doe">
+                </div>
+                <div class="about-content">
+                    <h2>Hi, I'm Apurva Agarwal! 👋</h2>
+                    <p>
+                        I am a full stack developer with 2 years of experience in both application
+                        and presentation layers. I have worked on applications and microservices
+                        deployed on IBM Cloud. I am an avid user of IBM Watson Services and have
+                        worked on Watson Assistant, NLU, Sentiment analyzer to name a few.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+                    </div>
+                    <h3>HTML</h3>
+                    <p>2 years experience</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                    </div>
+                    <h3>JavaScript</h3>
+                    <p>1.5 years experience</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+                    </div>
+                    <h3>Java</h3>
+                    <p>5 years experience</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="React">
+                    </div>
+                    <h3>C++</h3>
+                    <p>1 year experience</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png" alt="Node.js">
+                    </div>
+                    <h3>C</h3>
+                    <p>1 years experience</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+                    </div>
+                    <h3>CSS</h3>
+                    <p>2 years experience</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <h2>Projects</h2>
+            <div class="projects-list">
+                <div class="project-item">
+                    <h3>Chatbot</h3>
+                    <p>Developed a secure website integrated with chatbot for an automobile client using HTML, CSS, JavaScript and IBM Watson Assistant</p>
+                </div>
+                <div class="project-item">
+                    <h3>Sentiment Analyzer</h3>
+                    <p>Developed and deployed a sentiment analyzer for the box reviews section of an eCommerce platform using IBM NLU</p>
+                </div>
+                <div class="project-item">
+                    <h3>Fashion Website</h3>
+                    <p>Created a styled multi-page website for a new player in the fashion industry and integrated it with a shopping cart, using stripe for payment gateway</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommendations Section -->
+        <section id="recommendations" class="recommendations-section">
+            <h2>Recommendations</h2>
+            <div class="recommendations-container" id="recommendationsList">
+                <div class="recommendation-card">
+                    <p>"Shubham is a very quick learner and quickly grasps key concepts of Web development. She got a great attitude & she is an excellent team player. She has a curious mind and asks the right question. She takes initiative within a team and has potential to lead the team."</p>
+                </div>
+                <div class="recommendation-card">
+                    <p>"Working with Shubham has been an awesome experience. She is highly knowledgeable and always goes the extra step to make sure everything is right. For any future projects that need her expertise I would definitely want to work with her again."</p>
+                </div>
+                <div class="recommendation-card">
+                    <p>"I had worked along with Shubham during the initial phase of our venture which needed Web development. She is a committed resource who has in depth knowledge about the domain. She will be an asset for any organization!"</p>
+                </div>
+            </div>
+
+            <!-- Recommendation Form -->
+            <div class="recommendation-form">
+                <h3>Leave a Recommendation</h3>
+                <form id="recommendationForm">
+                    <div class="form-group">
+                        <input type="text" id="nameInput" placeholder="Name (Optional)" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="messageInput" placeholder="Message" rows="6" class="form-textarea" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Popup Modal -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup">
+            <h3>Thanks for leaving a recommendation!</h3>
+            <button class="popup-btn" id="closePopup">Ok</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
