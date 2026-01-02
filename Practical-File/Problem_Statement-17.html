@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q17 - addEventListener</title>
+    <style> body{padding:40px;font-family:Arial;} #box{width:200px;height:100px;background:blue;color:white;cursor:pointer;} </style>
+</head>
+<body>
+    <h1>addEventListener: Mouse & Keyboard</h1>
+    <div id="box" tabindex="0">Click or Hover or Type (focus first)</div>
+    <p id="log"></p>
+    <script>
+        let box=document.getElementById('box'), log=document.getElementById('log');
+        box.addEventListener('click',()=>{box.textContent='Clicked!';log.textContent='Click event';});
+        box.addEventListener('mouseover',()=>{box.style.background='green';});
+        box.addEventListener('mouseout',()=>{box.style.background='blue';});
+        box.addEventListener('keydown',e=>{log.textContent=`Key: ${e.key}`;if(e.key==='Enter')box.textContent='Enter pressed!';});
+    </script>
+</body>
+</html>

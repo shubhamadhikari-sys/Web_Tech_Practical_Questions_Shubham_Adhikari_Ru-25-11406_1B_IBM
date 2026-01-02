@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q16 - Create/Append/Remove Elements</title>
+</head>
+<body>
+    <h1>Create & Manipulate Elements</h1>
+    <input id="txt" placeholder="Enter text"><button onclick="addEl()">Add</button>
+    <button onclick="clearList()">Clear All</button>
+    <ul id="list"></ul>
+    <script>
+        function addEl(){
+            let txt=document.getElementById('txt').value;
+            if(!txt) return;
+            let li=document.createElement('li');
+            li.textContent=txt;
+            li.style.cssText='padding:10px;background:#eee;margin:5px;list-style:none;';
+            document.getElementById('list').appendChild(li);
+            document.getElementById('txt').value='';
+        }
+        function clearList(){
+            let list=document.getElementById('list');
+            while(list.firstChild) list.removeChild(list.firstChild);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q18 - Mouse Events & Child Nodes</title>
+</head>
+<body>
+    <h1>Mouse Events, Remove/Modify Child Nodes, Keyboard</h1>
+    <div id="area" style="width:300px;height:150px;border:2px solid black;padding:20px;background:lightyellow;">
+        Hover here - children added/removed
+    </div>
+    <br>
+    <input id="keybox" placeholder="Press keys" style="padding:10px;font-size:16px;">
+    <div id="status"></div>
+    <script>
+        let area=document.getElementById('area');
+        area.addEventListener('mouseenter',()=>{
+            let child=document.createElement('p');
+            child.textContent='Mouse entered - new child!';
+            child.style.color='red';
+            area.appendChild(child);
+        });
+        area.addEventListener('mouseleave',()=>{
+            if(area.lastChild && area.lastChild.tagName==='P'){
+                area.removeChild(area.lastChild);
+            }
+        });
+        document.getElementById('keybox').addEventListener('keyup',e=>{
+            document.getElementById('status').textContent=`Last key: ${e.key} (modified dynamically)`;
+        });
+    </script>
+</body>
+</html>

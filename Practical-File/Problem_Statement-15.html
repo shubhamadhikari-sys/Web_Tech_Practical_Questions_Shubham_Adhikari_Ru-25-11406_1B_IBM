@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q15 - DOM getElementById & querySelector</title>
+    <style> body{font-family:sans-serif;padding:20px;} #output{background:#f0f0f0;padding:20px;} </style>
+</head>
+<body>
+    <h1>DOM Manipulation: getElementById & querySelector</h1>
+    <button onclick="updateById()">getElementById + innerHTML</button>
+    <button onclick="updateByQuery()">querySelector + style</button>
+    <div id="output">Click buttons to manipulate this div</div>
+    <script>
+        function updateById(){
+            document.getElementById('output').innerHTML='<h2>Updated by ID!</h2><p>innerHTML changed content.</p>';
+        }
+        function updateByQuery(){
+            document.querySelector('#output').style.background='lightgreen';
+            document.querySelector('#output').textContent='Updated by querySelector!';
+        }
+    </script>
+</body>
+</html>

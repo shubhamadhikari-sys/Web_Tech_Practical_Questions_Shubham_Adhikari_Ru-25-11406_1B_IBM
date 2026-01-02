@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q19 - Canvas Shapes & Colors</title>
+    <style>
+        body { font-family: Arial; text-align: center; background: #f0f0f0; padding: 20px; }
+        canvas { border: 2px solid #333; background: white; margin: 10px; }
+        button { padding: 10px 20px; margin: 5px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+    <h1>Canvas Drawing: Shapes & Fill Colors</h1>
+    <canvas id="canvas1" width="400" height="300"></canvas>
+    <canvas id="canvas2" width="400" height="300"></canvas>
+    <br>
+    <button onclick="drawShapes1()">Draw Circle & Rect</button>
+    <button onclick="clearCanvas1()">Clear</button>
+    <button onclick="drawShapes2()">Draw Triangle & Line</button>
+    <button onclick="clearCanvas2()">Clear</button>
+
+    <script>
+        const ctx1 = document.getElementById('canvas1').getContext('2d');
+        const ctx2 = document.getElementById('canvas2').getContext('2d');
+
+        function clearCanvas1() { ctx1.clearRect(0, 0, 400, 300); }
+        function clearCanvas2() { ctx2.clearRect(0, 0, 400, 300); }
+
+        function drawShapes1() {
+            // Circle
+            ctx1.beginPath();
+            ctx1.arc(100, 100, 50, 0, 2 * Math.PI);
+            ctx1.fillStyle = 'lightblue';
+            ctx1.fill();
+            ctx1.strokeStyle = 'blue';
+            ctx1.lineWidth = 3;
+            ctx1.stroke();
+
+            // Rectangle
+            ctx1.fillStyle = 'lightgreen';
+            ctx1.fillRect(250, 80, 120, 80);
+            ctx1.strokeStyle = 'green';
+            ctx1.strokeRect(250, 80, 120, 80);
+        }
+
+        function drawShapes2() {
+            // Triangle
+            ctx2.beginPath();
+            ctx2.moveTo(100, 50);
+            ctx2.lineTo(200, 150);
+            ctx2.lineTo(50, 150);
+            ctx2.closePath();
+            ctx2.fillStyle = 'orange';
+            ctx2.fill();
+            ctx2.strokeStyle = 'darkred';
+            ctx2.lineWidth = 2;
+            ctx2.stroke();
+
+            // Line
+            ctx2.beginPath();
+            ctx2.moveTo(250, 50);
+            ctx2.lineTo(350, 250);
+            ctx2.lineWidth = 5;
+            ctx2.strokeStyle = 'purple';
+            ctx2.stroke();
+        }
+    </script>
+</body>
+</html>
