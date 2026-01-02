@@ -1,0 +1,245 @@
+/* --- Simple Cyber-Minimalist Theme for Beginners --- */
+
+:root {
+    --blue: #00d2ff;
+    --green: #92fe9d;
+    --pink: #ff00ff;
+    --dark: #0f172a;
+    --glass: rgba(255, 255, 255, 0.1);
+    --text: #f8fafc;
+    --glow: 0 0 15px rgba(0, 210, 255, 0.5);
+}
+
+/* Reset everything */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--dark);
+    color: var(--text);
+    scroll-behavior: smooth;
+}
+
+/* Fixed top navigation */
+header {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1000px;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: linear-gradient(to right, var(--blue), var(--green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--blue);
+    text-shadow: var(--glow);
+}
+
+/* Hero section */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    background: linear-gradient(var(--dark), var(--dark)), 
+                linear-gradient(var(--blue), var(--green));
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    margin-bottom: 25px;
+    box-shadow: var(--glow);
+    transition: all 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px var(--blue);
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    background: linear-gradient(to right, var(--blue), var(--green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Simple cards */
+.card {
+    background: var(--glass);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--blue);
+    box-shadow: 0 20px 40px rgba(0,210,255,0.2);
+}
+
+/* Skills grid - simple hover effect */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.skill-item {
+    background: var(--glass);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    padding: 25px 15px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.skill-item:hover {
+    transform: translateY(-8px);
+    border-color: var(--blue);
+    box-shadow: var(--glow);
+}
+
+.skill-item img {
+    width: 50px;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 0 10px currentColor);
+}
+
+.skill-name {
+    font-weight: 600;
+    color: var(--text);
+}
+
+/* Section titles */
+h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin: 60px 0 40px;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: var(--blue);
+    border-radius: 2px;
+    box-shadow: var(--glow);
+}
+
+/* Simple fade in animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive for phones */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        width: 95%;
+    }
+    
+    nav ul {
+        gap: 15px;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 15px;
+    }
+    
+    .profile-img {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--blue);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--green);
+}
