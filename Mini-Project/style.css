@@ -48,8 +48,8 @@ header {
     font-size: 1.5rem;
     font-weight: bold;
     background: linear-gradient(to right, var(--blue), var(--green));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: transparent;
+    background-clip: text;
 }
 
 nav ul {
@@ -86,7 +86,7 @@ nav a:hover {
     height: 200px;
     border-radius: 50%;
     border: 3px solid transparent;
-    background: linear-gradient(var(--dark), var(--dark)), 
+    background: linear-gradient(var(--dark), var(--dark)),
                 linear-gradient(var(--blue), var(--green));
     background-origin: border-box;
     background-clip: content-box, border-box;
@@ -104,8 +104,8 @@ h1 {
     font-size: 3rem;
     margin-bottom: 15px;
     background: linear-gradient(to right, var(--blue), var(--green));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: transparent;
+    background-clip: text;
 }
 
 /* Simple cards */
@@ -127,7 +127,7 @@ h1 {
     box-shadow: 0 20px 40px rgba(0,210,255,0.2);
 }
 
-/* Skills grid - simple hover effect */
+/* Skills grid */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -186,18 +186,6 @@ h2::after {
     box-shadow: var(--glow);
 }
 
-/* Simple fade in animation */
-.fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s ease;
-}
-
-.fade-in.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 /* Responsive for phones */
 @media (max-width: 768px) {
     header {
@@ -206,40 +194,22 @@ h2::after {
         padding: 20px;
         width: 95%;
     }
-    
+
     nav ul {
         gap: 15px;
     }
-    
+
     h1 {
         font-size: 2.5rem;
     }
-    
+
     .skills-grid {
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
         gap: 15px;
     }
-    
+
     .profile-img {
         width: 160px;
         height: 160px;
     }
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--dark);
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--blue);
-    border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--green);
 }
